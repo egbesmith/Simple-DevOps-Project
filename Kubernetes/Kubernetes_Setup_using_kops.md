@@ -7,7 +7,7 @@
     curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip
     sudo apt update
     sudo apt install unzip python
-    unzip awscli-bundle.zip
+    unzip 
     #sudo apt-get install unzip - if you dont have unzip in your system
     ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
     ```
@@ -15,6 +15,10 @@
 1. Install kubectl on ubuntu instance
    ```sh
    curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+   # download a specific version, replace the $(curl -L -s https://dl.k8s.io/release/stable.txt) portion of the command with the specific version.
+   # curl -LO https://dl.k8s.io/release/v1.29.2/bin/linux/amd64/kubectl
+   # curl -LO https://dl.k8s.io/release/v1.29.2/bin/linux/arm64/kubectl
+   For example, to download version 1.29.2 on Linux x86-64, type:
     chmod +x ./kubectl
     sudo mv ./kubectl /usr/local/bin/kubectl
    ```
